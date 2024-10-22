@@ -1,4 +1,4 @@
-
+//cyril bayot
 import java.util.Scanner;
 
 public class main{
@@ -31,31 +31,33 @@ public class main{
                 System.out.print("Enter Choice: ");
                 int ch = sc.nextInt();
                 System.out.println();
+              
 
-                if(ch == 1){
-                    op.viewBalance();
-
-                }else if (ch == 2){
-                    System.out.print("Enter amount to Withdraw : ");
-                    double withdrawAmount = sc.nextDouble();
-                    op.withdrawAmount(withdrawAmount);
-
-                }else if (ch == 3){
-                    System.out.print("Enter Amount to Deposit : ");
-                    double depositAmount = sc.nextDouble();
-                    op.depositAmount(depositAmount);
-
-                }else if (ch == 4){
-                    op.viewMiniStatement();
-
-                }else if (ch == 5){
-                    System.out.println("Collect your atm card\n Thank you for using this machine! ");
-                    System.exit(0);
-                }else{
-                    System.out.println("Please enter correct choice");
-                }
+                switch (ch) {
+                    case 1:
+                        op.viewBalance();
+                        break;
+                    case 2:
+                        System.out.print("Enter amount to Withdraw : ");
+                        double withdrawAmount = sc.nextDouble();
+                        op.withdrawAmount(withdrawAmount);
+                        break;
+                    case 3:
+                        System.out.print("Enter Amount to Deposit : ");
+                        double depositAmount = sc.nextDouble();
+                        op.depositAmount(depositAmount);
+                        break;
+                    case 4:
+                        op.viewMiniStatement();
+                        break;
+                    case 5:
+                        System.out.println("Collect your atm card! \nThank you for using this machine! ");
+                        System.exit(0);
+                    default:
+                        System.out.println("Please enter correct choice");
+                        break;
+                } 
             }
-
             
         }else{
             System.out.println("Wrong ATM number or pin");
