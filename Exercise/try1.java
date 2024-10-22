@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class try1{
@@ -16,7 +15,7 @@ public class try1{
         System.out.print("Choose an option: ");
         choice = sc.nextInt();
         sc.nextLine();   
-
+        
         switch (choice){
 
             case 1:
