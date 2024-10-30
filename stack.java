@@ -29,7 +29,7 @@ class Stack {
          System.out.println("No name to pop. ");
          return null;
       }else{
-        String name = stackArray[top];
+        String name = stackArray[top--];
         System.out.println("Pooped: " + name );    
         return name;
       }
@@ -101,7 +101,7 @@ class Stack {
 
                     case 4:
                 
-                    System.out.println("View the list of stack: " + stack.list());
+                   stack.list();
                      break;
                     case 5:
                     System.out.println("Is the stack empty? " + stack.isEmpty());
